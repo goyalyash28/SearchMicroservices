@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     echo "building the application..."
-                    sh "mvn package"
+                    bat "mvn package"
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     echo "Deploying the application..."
-                    sh 'java -jar target/SearchMicroservices-0.0.1-SNAPSHOT.jar'
+                    bat 'java -jar target/SearchMicroservices-0.0.1-SNAPSHOT.jar'
 
                 }
             }
